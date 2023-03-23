@@ -1,4 +1,4 @@
-
+# Emilio Sierra
 def encoder():
     holder = [*pw]  # holder is a container, pw is turned into str list
     holder = [int(x) for x in holder]  # every item in holder list is turned into integer
