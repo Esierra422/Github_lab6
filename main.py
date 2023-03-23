@@ -7,6 +7,13 @@ def encoder():
     complete = "".join((str(x) for x in enc_pw))  # converts the manipulated list back to string
     return complete
 
+def decode():
+    holder = [*encoded]
+    holder = [int(x) for x in holder] #this turns the characters in the number string from str to int to allow for manipulation
+    holder = [x - 3 for x in holder] #this lowers the value of every digit in the password string by 3
+    complete = "".join((str(x) for x in enc_pw))
+    return complete
+
 
 if __name__ == "__main__":
     while True:
