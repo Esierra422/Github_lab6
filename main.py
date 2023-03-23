@@ -1,4 +1,4 @@
-
+# Emilio Sierra
 def encoder():
     holder = [*pw]  # holder is a container, pw is turned into str list
     holder = [int(x) for x in holder]  # every item in holder list is turned into integer
@@ -11,7 +11,7 @@ def decode():
     holder = [*encoded]
     holder = [int(x) for x in holder] #this turns the characters in the number string from str to int to allow for manipulation
     holder = [x - 3 for x in holder] #this lowers the value of every digit in the password string by 3
-    complete = "".join((str(x) for x in enc_pw))
+    complete = "".join((str(x) for x in holder))
     return complete
 
 
@@ -24,6 +24,7 @@ if __name__ == "__main__":
             print("Your password has been encoded and stored!\n")
         if x == 2:
             encoded = encoder()
-            print(f"The encoded password is {encoded}, and the original password is {pw}.\n")
+            complete = decode()
+            print(f"The encoded password is {encoded}, and the original password is {complete}.\n")
         if x == 3:
             quit()
